@@ -1,0 +1,38 @@
+package dec17;
+
+import java.util.Scanner;
+
+public class printprime {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner a = new Scanner(System.in);
+		int b = a.nextInt();
+		int c = 2;
+		boolean isPrime=true;
+
+		while (c <= b) {
+
+			int d = 1;
+			while (d*d <= c) {
+				
+
+				if (c % d == 0) {
+					isPrime = false;
+					break;
+				}
+				d++;
+			}
+			 else {
+				 isPrime=true;
+					
+					break;
+				}
+			 System.out.print(c);
+			c++;
+
+		}
+	}
+
+}

@@ -1,0 +1,21 @@
+package dec17;
+
+import java.util.Scanner;
+
+public class prime {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner a = new Scanner(System.in);
+		int b=a.nextInt();
+		int c=2;
+				while(b%c>0 &&c<b){
+					System.out.println(b+" is not prime");
+					c++;
+					break;
+				}
+				System.out.println(b+ " is prime");			
+	}
+	
+
+}
