@@ -9,6 +9,7 @@ public class prime {
 		Scanner a = new Scanner(System.in);
 		int b=a.nextInt();
 		int c=1;
+		
 				while(c<b)
 				{
 				c++;	
