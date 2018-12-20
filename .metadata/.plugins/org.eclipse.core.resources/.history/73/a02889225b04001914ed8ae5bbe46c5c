@@ -8,17 +8,17 @@ public class prime {
 		// TODO Auto-generated method stub
 		Scanner a = new Scanner(System.in);
 		int b=a.nextInt();
-		int c=2;
+		int c=1;
 		
 				while(c<b)
 				{
-					
+				c++;	
 				if(b%c==0)
 				{
 					System.out.println(b+ " not is prime");
-					return;
+					break;
 					}
-				c++;
+					
 				}
 				
 				
