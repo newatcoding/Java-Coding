@@ -1,0 +1,10 @@
+package dec20;
+
+public class celciusfaranite {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

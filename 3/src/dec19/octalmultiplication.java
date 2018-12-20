@@ -4,7 +4,7 @@ public class octalmultiplication {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int dn = multiplyoctal(23,6);
+		int dn = multiplyoctal(16,6);
 		System.out.println(dn + " ");
 
 	}

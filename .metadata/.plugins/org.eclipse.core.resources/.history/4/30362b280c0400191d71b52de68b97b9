@@ -1,0 +1,15 @@
+package dec20;
+
+import java.util.Scanner;
+
+public class binary {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner a =new Scanner(System.in);
+		int b=a.nextInt();
+		System.out.println(Integer.toBinaryString(b));
+
+	}
+
+}
