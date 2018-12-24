@@ -1,0 +1,24 @@
+package hackerrank;
+
+import java.util.Scanner;
+
+public class HCF {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		  Scanner a=new Scanner(System.in);
+          int num1=a.nextInt();
+            int num2=a.nextInt();
+        int p=1;  
+        while(num1!=0 ||num2!=0)
+        { 
+        	p++; 
+            if(num1%p==0 && num2%p==0)
+            {
+            num1=num1/p;
+            num2=num2/p;
+            }
+        }
+        System.out.println(p);
+    }
+}

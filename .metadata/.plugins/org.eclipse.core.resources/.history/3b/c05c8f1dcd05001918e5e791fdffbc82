@@ -1,0 +1,40 @@
+package hackerrank;
+
+import java.util.Scanner;
+
+public class pattern15 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		 Scanner n=new Scanner(System.in);
+	        int b=n.nextInt();
+	       int i;
+	       
+	         
+	        for(i=1;i<=b;i++)
+	        {
+	 
+	           for(int k=1;k<=i;k++)
+	                { 
+	                
+	                    System.out.print(k+" ");
+	                   
+	                }
+	           int c=b;
+	            for(int k=c*2;k>=0;k--)
+	            {
+	                System.out.print("_");
+	                c=c-2;
+	            }
+	           for(int k=i;k>=1;k--)
+	                { 
+	                
+	                    System.out.print(k+" ");
+	                }  
+
+	            System.out.println(" ");
+	           	    }
+
+	} 
+	        }
+

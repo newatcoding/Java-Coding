@@ -1,0 +1,58 @@
+package hackerrank;
+
+import java.util.Scanner;
+
+
+public class Arnstrong {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner a=new Scanner(System.in);
+		int arn=a.nextInt();
+		int er=a.nextInt();
+		int pow=0;
+		int ans=0;
+		int p=arn;
+		
+		while(arn!=0)
+		{
+			int rem=arn%10;
+			int c=(int)Math.pow(rem, 3);
+			ans=ans+ c;
+			arn=arn/10;	
+			}
+			if(ans==p)
+			{
+			System.out.println("true");
+			}
+		else
+			{
+				System.out.println("false");
+			}
+			for(int i=1;i<=er;i++)
+			{
+				int q=i;
+				while(q!=0)
+				{
+					pow++;
+					q=q/10;
+				}
+				while(arn!=0)
+				{
+					int rem=arn%10;
+					int c=(int)Math.pow(rem, 3);
+					ans=ans+ c;
+					arn=arn/10;	
+					}
+					if(ans==p)
+					{
+						System.out.println(i+ " ");
+					}
+					else
+					{
+						break;
+					}
+			}
+	}
+
+}

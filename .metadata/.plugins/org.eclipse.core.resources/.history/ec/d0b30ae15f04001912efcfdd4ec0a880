@@ -1,0 +1,37 @@
+package dec17;
+
+public class reversingnumber {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		 Scanner a=new Scanner(System.in);
+	      int num=a.nextInt();
+	        p=1;
+	        if(num<=10^9)
+	        {   int ans=0;
+	            int num2=num;
+	            while(num2!=0)
+	            {
+	                num2=num2/10;
+	                p++;
+	            }
+	         while(p!=0)
+	         {
+	             int q=10^p;
+	             p--;
+	         }
+	            while(num!=0 || q!=0)
+	            {
+	                int rem=num%10;
+	                int num3=num/10;
+	                int ans=ans+rem*q ;
+	                q=q/10;
+	            }
+	            
+	        }
+	        else
+	        {
+	         System.out.println("invalid number");
+	        }
+	        }
+	}

@@ -1,0 +1,39 @@
+package hackerrank;
+
+public class numbersystremandfunction {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner a=new Scanner(System.in);
+        int sn=a.nextInt();
+        int sb=a.nextInt();
+        int db=a.nextInt();
+        int num=547;
+        int sum=0;
+        int pow=1;
+        while(num!=0)
+        {
+            int rem=num%10;
+            num=num/10;
+            int bin=convertbase(sn,sb,db);
+                    sum=sum+bin*pow;
+            pow=pow*1000;
+        }
+        System.out.println(sum);
+        }
+        public static int convertbase(int sn, int sb, int db) {
+            int pow = 1;
+            int rem;
+            int sum = 0;
+            while (sn != 0) {
+                rem = sn % db;
+                sn = sn / db;
+                sum = sum + rem * pow;
+                pow = pow * sb;
+
+            }
+            return sum;
+
+    }
+}

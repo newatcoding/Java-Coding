@@ -1,0 +1,29 @@
+package dec21;
+
+import java.util.Scanner;
+
+public class rotatingarray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] arr={0,1,2,3,4,5};
+//		Scanner a=new Scanner(System.in);
+//		int p=a.nextInt();
+		for(int i=0;i<(p-1)/2;i++)
+		{
+			arr[i]=arr[p-i];
+			System.out.print(arr[i]+" ");
+		}
+		for(int i=p;i<5;i++)
+		{ int j=1;
+			arr[p]=arr[6-j];
+			j++;
+		}
+		for(int i=0;i<6;i++)
+		{
+			arr[i]=arr[6-i];
+			System.out.print(arr[i]+" ");
+		}
+	}
+
+}

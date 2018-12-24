@@ -35,7 +35,7 @@ public class genconvertnewmethod {
 //		}
 //		return sum;
 //		System.out.println(convertbase(10, 4, 2));
-		int num=547;
+		int num=77;
 		int sum=0;
 		int pow=1;
 		while(num!=0)
