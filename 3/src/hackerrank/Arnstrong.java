@@ -36,16 +36,19 @@ public class Arnstrong {
 				System.out.println("false");
 				
 			}
+		
 			for(int i=1;i<=er;i++)
 			{ 	ans=0;
-				int q=i;
+				
 				int q2=i;
 				int pow1=0;
-				while(q!=0)
+				int er1=er;
+				while(er1!=0)
 				{
 					pow1++;
-					q=q/10;
+					er1=er1/10;
 				}
+				
 				while(q2!=0)
 				{
 					int rem=q2%10;

@@ -1,0 +1,42 @@
+package dec26;
+
+import java.util.Scanner;
+
+public class compressingstring {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scn =new Scanner(System.in);
+		String str=scn.next();
+		compress(str);
+	    
+	}
+	public static void compress(String str)
+	{
+		StringBuilder str1= new StringBuilder();
+		int p=0;
+		for(int i=p; i<str.length();i++)
+		{ char c=str.charAt(i);
+			str1.append(c);
+			for(int j=0;j<str.length();j++)
+			{
+				
+				char d=str.charAt(j+1);
+				if(c==d)
+				{
+					p++;
+					System.out.print(p+" ");
+				}
+				else if(c!=d)
+				{
+					System.out.println(p+" ");
+					p++;
+					break;
+				}
+			}
+			
+		}
+		System.out.println(str1.toString());
+	}
+
+}

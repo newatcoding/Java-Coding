@@ -14,7 +14,7 @@ public class array {
 		{
 			System.out.println("enter" +i+ "th element");	//putting value in the array
 			arr[i]=a.nextInt();
-		}
+		} 
 		for(int i=0;i<arr.length;i++)
 		{
 			System.out.println(arr[i]); 			//checkng the length of the array

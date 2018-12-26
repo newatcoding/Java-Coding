@@ -1,0 +1,16 @@
+package dec26;
+
+public class modifingastring {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		StringBuilder sb= new StringBuilder("abc");
+		System.out.println(sb.toString());
+		sb.append("def");
+		System.out.println(sb.toString());
+		sb.setCharAt(1, 'p');
+		System.out.println(sb.toString());
+		
+	}
+
+}
