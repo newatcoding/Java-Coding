@@ -1,0 +1,23 @@
+package dec30;
+
+public class gettingsumof10usingdice {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		printboardpath(0,10,"");
+	}
+	public static void printboardpath(int src,int dest,String path){
+		if(src==dest)
+		{
+			System.out.println(path);
+			return;
+		}
+		for (int i = 1; i <= 6 && src+i<=dest; i++) {
+		
+			printboardpath(src+i, dest,path+i);
+
+		}
+		
+	}
+
+}

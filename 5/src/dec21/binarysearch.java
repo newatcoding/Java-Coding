@@ -14,7 +14,7 @@ public class binarysearch {
 		int low=0;
 		int high=9;
 		while(low<=high)
-		{ 
+		{ 	
 		int m=(high+low+1)/2;
 			if(arr[m]>num)
 			{

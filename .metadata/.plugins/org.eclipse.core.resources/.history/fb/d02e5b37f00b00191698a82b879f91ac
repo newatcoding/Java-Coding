@@ -1,0 +1,10 @@
+package dec30;
+
+public class gettingsumof10usingdice {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

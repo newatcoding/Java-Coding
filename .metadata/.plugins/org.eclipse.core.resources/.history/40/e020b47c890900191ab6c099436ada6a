@@ -1,0 +1,20 @@
+package dec27;
+
+public class recursionDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		fpd(5);
+		
+	}
+	public static void fpd(int x)
+	{
+		if(x==0)
+		{
+			return;
+		}
+		System.out.println(x);
+		fpd(x-1);
+	}
+	
+}

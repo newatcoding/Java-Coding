@@ -1,0 +1,37 @@
+package dec27;
+
+public class printarray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] arr={6,4,3,2,5};
+		printarray(0,arr);
+		
+		decreasingarray(0,arr);
+	}
+	public static void printarray(int a ,int[] n)
+	{
+		if(a==n.length)
+		{
+			return;
+		}
+				System.out.println(n[a]);
+				printarray(a+1,n);
+		
+	}
+
+
+
+	public static void decreasingarray(int a,int[] n)
+	{
+		if(a==5)
+		{
+			return;
+		}
+		
+		decreasingarray(a+1,n);
+		
+		System.out.println(n[4]);
+		
+	}
+}

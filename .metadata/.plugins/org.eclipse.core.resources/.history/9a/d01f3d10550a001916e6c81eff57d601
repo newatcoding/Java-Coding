@@ -1,0 +1,19 @@
+package dec27;
+
+public class printarray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	public static void printarray(int a ,int[] n)
+	{
+		printarray(a-1,n);
+		n[a-1]=a;
+		a=a-1;
+		
+		System.out.println(n[a]);
+		
+	}
+
+}
