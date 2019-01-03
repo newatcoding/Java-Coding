@@ -1,0 +1,25 @@
+package jan02;
+
+public class CoinPermutation {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] coins={2,3,5,6};
+		CoinPermutation(coins,10,"" )
+	}
+	public static void CoinPermutation(int[] coin,int AmtToPay,String WaysToPay)
+	{
+		if(AmtToPay==0)
+		{
+			System.out.println(WaysToPay);
+			return;
+		}
+		for(int i=0;i<coin.length;i++)
+		{
+			int c=coin[i];  
+			CoinPermutation(coin,AmtToPay-c,WaysToPay+(coin[i]));
+		}
+		
+	}
+
+}
