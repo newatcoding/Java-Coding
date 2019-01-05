@@ -21,25 +21,77 @@ public class Sorting {
 			arr3[i] = scn.nextInt();
 		}
 		bubblesort(arr1);
-		incersionsort(arr2);
+		insersionsort(arr2);
 		selectionsort(arr3);
 	}
-	public static void bubblesort(int[] arr)
+	public static void insersionsort(int[] arr)
 	{
+		 int i, key, j; 
+		   for (i = 1; i <arr.length; i++) 
+		   { 
+		       key = arr[i]; 
+		       j = i-1; 
+		  
+		       /* Move elements of arr[0..i-1], that are 
+		          greater than key, to one position ahead 
+		          of their current position */
+		       while (j >= 0 && arr[j] < key) 
+		       { 
+		           arr[j+1] = arr[j]; 
+		           j = j-1; 
+		       } 
+		       arr[j+1] = key; 
+		   } 
+		   for(i=0;i<arr.length;i++)
+		   {
+			   System.out.print(arr[i]+" ");
+		   }
+			   System.out.println("");
+	}
+	public static void bubblesort(int[] arr)
+	{	
 		int c;
+		int d=0;
+		while(d<arr.length)
+		{
+		for(int i=0;i<arr.length-1;i++)
+		{
+			if(arr[i]>arr[i+1])
+			{
+				c=arr[i+1];
+				arr[i+1]=arr[i];
+				arr[i]=c;
+			}
+		} d++;
+		}
 		for(int i=0;i<arr.length;i++)
 		{
-			for(int j=0;j<arr.length;j++)
-			{
-				
-			
-			if(arr[i]>arr[j+1])
-			{
-				c=arr[j+1];
-				arr[j+1]=arr[i];
-				arr[i]=c;
-			}}
+			System.out.print(arr[i]+" ");
 		}
+		System.out.println("");
 	}
-
+	public static void selectionsort(int[] arr)
+	{ int k=0;
+		for(int i=k;i<arr.length;i++)
+		{
+			int c=arr[i];
+			for(int j=k;j<arr.length-1;j++)
+			{
+				if(c>arr[j+1])
+				{
+					int d=c;
+					c=arr[j+1];
+					arr[j+1]=d;
+					
+				}
+			}
+			arr[k]=c;
+			k++;
+		}
+		for(int i=0;i<arr.length;i++)
+		{
+		System.out.print(arr[i]+" ");
+		}
+		}
+	// lakshay's code 
 }
