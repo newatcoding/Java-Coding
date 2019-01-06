@@ -29,10 +29,10 @@ public class checkthepallindrome {
 		{
 			System.out.println(str +"  it is pallindrome");
 		}
-		else if(p>0)
-		{
-			System.out.println( str +"  not pallindrome");
-		}
+//		else if(p>0)
+//		{
+//			System.out.println( str +"  not pallindrome");
+//		}
 		
 	}
 	public static void printallpalsubstr(String str)

@@ -1,7 +1,0 @@
-package dec30;
-
-public class Snippet {
-	for(String val:vres)
-	    			res.add("V"+val);
-}
-

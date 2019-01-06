@@ -1,0 +1,31 @@
+package jan06;
+
+public class PermulationUsingString {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String str1="abc";
+		String str2="";
+		printPermutation1(str1,str2);
+		
+	}
+	public static void printPermutation1(String ques,String ans)
+	{
+		if(ans.length()==ques.length())
+		{
+			System.out.println(ans);
+			return;
+		}
+		String c=ques;
+		for(int i=0;i<c.length();i++)
+		{
+			char ch=ques.charAt(i);
+			
+		printPermutation1(ques,ans);
+		ans=ans+ch;
+		c=ques.substring(0, i)+ques.substring(i+1,ques.length());
+				printPermutation1(c,ans);
+			}
+		return;
+	}
+}
