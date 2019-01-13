@@ -27,7 +27,7 @@ public class SpiralPrintclockwise {
 		while (cnt <= tne) {
 
 			// top wall
-						for (int c = rmin; c <= rmax && cnt <= tne; c++) {
+						for (int c = cmin; c <= cmax && cnt <= tne; c++) {
 							System.out.print(mat[rmin][c] + " ");
 							cnt++;
 						}
