@@ -14,11 +14,11 @@ public class pattern {
 		}
 		if(j>i)
 		{
+			System.out.println("");
 			return;
 		}
-		System.out.println("*");
-		printstar(i,j+1,max);
 		System.out.print("*");
-		printstar(i+1,j,max);
+		printstar(i,j+1,max);
+		printstar(i+1,1,max);
 	}
 }

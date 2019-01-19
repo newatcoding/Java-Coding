@@ -1,0 +1,10 @@
+package page6;
+
+public class recursionpattern {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

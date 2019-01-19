@@ -1,0 +1,10 @@
+package jan13;
+
+public class printhighfreqchar {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
