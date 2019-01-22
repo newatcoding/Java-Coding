@@ -1,0 +1,41 @@
+package jan20;
+
+public class zeroonesegregation {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int[] arr={1,0,1,1,1,0,0,1,1,0,1,0,1};
+		Segrigtezeroandone(arr);
+	}
+	public static void Segrigtezeroandone(int[] arr){
+		int i=0; int j=0;	
+	while(i<arr.length)
+	{
+		if(arr[i]==0)
+		{
+			swap(i,j,arr);
+			i++;
+			j++;
+		}
+		else if(arr[i]==1)
+		{
+			i++;
+		}
+	}
+	printanswer(arr);
+	}
+	public static void swap(int i,int j,int[] arr){
+		int temp=arr[i];
+		arr[i]=arr[j];
+		arr[j]=temp;
+		
+	}
+	public static void 	printanswer(int[] arr){
+		for(int i=0;i<arr.length;i++)
+		{
+		System.out.print(arr[i]+" ");
+		}
+	}
+	
+}
