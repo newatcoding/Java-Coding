@@ -1,0 +1,17 @@
+package jan20;
+
+public class problem {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+//Q 7 stairs, one can take one or two or three steps at a time ,find total ways in which he can come down
+		
+	}
+	public static int ways(int n,int[] box){
+		if(n==0){
+			return n;
+		}
+		if 
+	}
+
+}

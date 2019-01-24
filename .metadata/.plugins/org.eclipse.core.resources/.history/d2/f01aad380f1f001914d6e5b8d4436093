@@ -1,0 +1,29 @@
+package jan20;
+
+public class problem {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+//Q 7 stairs, one can take one or two or three steps at a time ,find total ways in which he can come down
+//	int[] box=new int[7];
+	
+		int c=ways(7);
+		System.out.println(c);
+	}
+	public static int count=0;
+	public static int ways(int n){
+		int sn=0;
+		if(n==0)
+		{
+			return sn;
+		}
+		int s1=ways(n-1);
+		int s2=ways(n-2);
+		int s3=ways(n-3);
+		sn=s1+s2+s3;
+		
+		return sn	;
+		
+	}
+
+}
