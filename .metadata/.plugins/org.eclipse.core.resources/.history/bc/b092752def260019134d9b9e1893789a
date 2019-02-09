@@ -1,0 +1,30 @@
+package page8;
+
+import java.util.Scanner;
+
+public class pallindromeString {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scn=new Scanner(System.in);
+		String str1=scn.next();
+		String str2=scn.next();
+		System.out.println(pallindrome(str1,str2,false,0));
+		
+	}
+	public static boolean pallindrome(String str1,String str2,boolean check,int i){
+		if(i==str1.length() || i==str2.length())
+		{
+			return check;
+		}
+		char ch1=str1.charAt(i);
+		char ch2=str2.charAt(str2.length()-1-i);
+		if(ch1!=ch2)
+		{
+			check= false;
+		}
+		pallindrome(str1, str2, check,i+1);
+		return check;
+	}
+
+}

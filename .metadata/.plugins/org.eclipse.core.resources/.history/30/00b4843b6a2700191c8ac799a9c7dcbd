@@ -1,0 +1,32 @@
+package feb03;
+
+import java.util.Scanner;
+
+public class SumOfSubsetN {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scn=new Scanner(System.in);
+		int tar=scn.nextInt();
+		int[] arr={2,3,5,6,1};
+		Targetsum(arr, tar);
+	}
+	public static void Targetsum(int[] arr,int tar){
+		boolean[][] bn=new boolean[arr.length][tar+1];
+		bn[0][0]=true;
+		for(int i=1;i<arr.length;i++){
+			bn[i][0]=true;
+			for(int j=0;j<tar+1;j++){
+				if(j-arr[i]==0 || bn[i-1][j]==true)
+				{
+					bn[i][j]=true;
+				}
+			}
+		}
+		for(int val:bn)
+		{
+			System.out.println(val+" ");
+		}
+	}
+
+}
