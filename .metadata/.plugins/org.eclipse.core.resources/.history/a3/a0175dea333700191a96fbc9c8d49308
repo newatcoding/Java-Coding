@@ -1,0 +1,71 @@
+package feb23;
+
+public class SortDecompositionRootN {
+
+	static int[] sqrt;
+	static int[] oa;
+	static int bs;
+	static int bn;
+	private static void preprocess(int[] arr){
+		bs=(int)Math.sqrt(arr.length);
+		bn=arr.length/bs;
+		oa=arr;
+		for(int i=0;i<arr.length;i++){
+			int block=i/bs;
+			sqrt[i]+=oa[i];
+		}
+	}
+	private static int query(int l,int r){
+		int sum=0;
+		int ls=l/bs;
+		int rs=r/bs;
+		if(ls==rs){
+			for(int i=l;i<=r;i++)
+			{
+				sum+=sqrt[i];
+			}
+			return sum;
+		}
+		//ls
+		for(int i=l; i/bs==ls;i++){
+			sum+=sqrt[i];
+		}
+		//mid
+		for(int b=ls+1;b<=rs-1;b++){
+			sum+=sqrt[b];
+		}
+		//rs
+		for(int c=r;c<=rs;c--){
+			sum+=sqrt[c];
+		}
+		return sum;
+	}
+	private static void update(int idx,int val){
+		int pos=idx/bs;
+		sqrt[pos]-=arr[idx];
+		sqrt[pos]+=val;
+	}
+	private static int querytest(int l,int r){
+		int qv=0;
+		for(int i=l;i<=r;i++)
+		{
+			qv+=sqrt[i];
+		}
+		return qv;
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] arr=new int[49];
+		for(int i=0;i<arr.length;i++){
+			arr[i]=(int)(Math.random()*10);
+		}
+		preprocess(arr);
+		System.out.println(query(15, 38));
+		System.out.println(query(15, 19));
+		System.out.println(arr[22]);
+		update(22, 43);
+		System.out.println(query(15, 38));
+		System.out.println(query(15, 19));
+	}
+
+}

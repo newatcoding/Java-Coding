@@ -9,34 +9,35 @@ public class MoveCharacter {
 		Scanner scn=new Scanner(System.in);
 		String str=scn.next();
 		char ch=scn.next().charAt(0);   //new way learn
-		int i=scn.nextInt();
-		String str1=MoveChar(str, 0,ch);
-		System.out.println(str1.charAt(i));
+
+		String str1=MoveChar(str, 0,ch," ");
+
 		System.out.println(str1);
 	}
-	public static String MoveChar(String str, int index,char ch){
-		if(index==str.length()-1)
+	public static int  count=0;
+	public static String MoveChar(String str, int index,char ch,String str1){
+		if(index<=str.length()-1)
 		{
-			return str;
+			return str1;
 		}
-		while(index<str.length()){
+	
 		if(str.charAt(index)==ch)
 		{
-			
-			str=move(str,index,ch);
+				count++;
+		 str1=MoveChar(str, index+1, ch,str1);
+		}
+		else{
+			str1=str1+str.charAt(index);
+			System.out.println();
+		 str1=MoveChar(str, index+1, ch,str1);
+		}
 		
-		}
-		index++;
-		}
-		String str1=MoveChar(str, index+1, ch);
+		
+		
 		return str1;
 		
 	}
-	public static String move(String str,int index,char ch){
-		String str1=str.substring(0,index);
-		String str2=str.substring(index+1);
-		str=str1+str2+ch;
-		return str;
+	
 		
-	}
+	
 }

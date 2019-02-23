@@ -21,9 +21,9 @@ public class CountorRemoveHi {
 		{
 			return ;
 		}
-		if(str.charAt(cnt)=='h')
+		if(str.charAt(cnt)=='h' && cnt<str.length()-1)
 		{
-			if(str.charAt(cnt+1)=='i')
+			if(str.charAt(cnt+1)=='i' )
 			{
 				count++;
 			}
@@ -32,7 +32,7 @@ public class CountorRemoveHi {
 		return;
 	}
 	public static String Remove(String str,int cnt){
-		if(cnt==str.length()-2)
+		if(cnt>=str.length()-1)
 		{
 			return str;
 		}
