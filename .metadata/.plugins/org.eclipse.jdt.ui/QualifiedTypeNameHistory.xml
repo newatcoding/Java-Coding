@@ -14,4 +14,7 @@
 <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.sql.Array"/>
+<fullyQualifiedTypeName name="java.util.logging.Handler"/>
+<fullyQualifiedTypeName name="mar16.NodeAndLL"/>
+<fullyQualifiedTypeName name="javax.xml.ws.Dispatch"/>
 </qualifiedTypeNameHistroy>

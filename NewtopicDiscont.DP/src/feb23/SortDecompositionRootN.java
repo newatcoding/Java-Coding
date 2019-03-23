@@ -10,7 +10,7 @@ public class SortDecompositionRootN {
 		
 		bs=(int)Math.sqrt(arr.length);
 		sqrt =new int[bs];
-		bn=arr.length/bs;
+		bn=(int)Math.ceil(arr.length*1.0/bs);
 		oa=arr;
 		for(int i=0;i<arr.length;i++){  //sqrt array stores sum of 7 cells of array each
 			int block=i/bs;
@@ -38,7 +38,7 @@ public class SortDecompositionRootN {
 			sum+=sqrt[b];
 		}
 		//rs   //taking value from original arr
-		for(int c=r;c<=rs;c--){
+		for(int c=r;c/bs==rs;c--){
 			sum+=oa[c];
 		}
 		return sum;
@@ -66,11 +66,11 @@ public class SortDecompositionRootN {
 		}
 		preprocess(arr);
 		System.out.println(query(15, 38)+" "+querytest(15, 38));
-		System.out.println(query(15, 19));
+		System.out.println(query(15, 19)+" "+querytest(15,19));
 		System.out.println(arr[22]);
 		update(22, 43);
-		System.out.println(query(15, 38));
-		System.out.println(query(15, 19));
+		System.out.println(query(15, 38)+" "+querytest(15, 38));
+		System.out.println(query(15, 19)+" "+querytest(15, 19));
 	}
 
 }

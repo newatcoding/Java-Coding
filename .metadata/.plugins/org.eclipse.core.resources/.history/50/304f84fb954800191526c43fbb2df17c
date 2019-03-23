@@ -1,0 +1,149 @@
+package mar16;
+
+import javax.xml.ws.Dispatch;
+
+public class NodeAndLL {
+	private class Node{
+		public int data;
+		public Node next;
+	}
+	 Node head;
+	 Node tail;
+	 int size;
+	
+	public NodeAndLL() {  //this constructor not needed in java as these values are 
+		head=tail=null;   //default values here but this step is needed in c++
+		size=0;
+	}
+	private  void whensizeisequalto0(int data){
+		//allocation
+		Node nn=new Node();
+		nn.data=data;
+		nn.next=null;
+		
+		//head value and next
+		head=tail=nn;
+		size++;
+	}
+	public void addend(int data ){
+	
+	if(head==null){
+		whensizeisequalto0(data);
+	}
+	
+	else{
+		//allocation
+				Node nn=new Node();
+				
+				
+				//head value and next
+				nn.data=data;
+				nn.next=null;
+				
+				
+				//connection
+				tail.next=nn;
+				
+				
+				//Summary
+				tail=nn;
+				size++;
+	}
+	}
+	
+	public void display(){
+		Node temp=head;
+		for(int i=0;i<size;i++){
+			System.out.println(temp.data);
+			temp=temp.next;
+		}
+		System.out.println();
+	}
+	public int getsize(){
+		return size ;
+	}
+	public boolean isEmpty(){
+		if(head==null){
+			return true;
+		}
+		else{
+			return false;
+		}
+	}
+	public void addfirst(int data){
+		if(size==0){
+			whensizeisequalto0(data);
+		}
+		else{
+			//allocation
+			Node nn=new Node();
+			nn.data=data;
+			nn.next=null;
+			//connection
+			nn.next=head;
+			//summary
+			head=nn;
+			size++;
+		}
+	}
+	
+	public int getFirst(){
+		if(size==0){
+			return -1;
+		}
+		else{
+			return head.data;
+		}
+	}
+	public int getLast(){
+		if(size==0){
+			return -1;
+		}
+		else{
+			return tail.data;
+		}
+	}
+	public int removeFirst(){
+	int temp;
+		if(size==1){
+			temp=head.data;
+			head=tail=null;
+			size=0;
+			return temp;
+		}
+		else{
+			temp=head.data;  //collect
+			Node second=head.next;
+			head=second;
+			size--;
+			return temp;
+		}
+			
+	}
+//	public int getNodeAt(int idx){
+//		Node temp=head;
+//	for(int i=0;i<idx;i++){
+//		temp=temp.next;
+//	}
+//	return temp;
+//	}
+//	public int getAt()
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		NodeAndLL  l1=new NodeAndLL();
+		l1.addend(10);
+		l1.addend(20);
+		l1.addend(30);
+		l1.addend(40);
+		l1.addend(50);
+		l1.display();
+		System.out.println(l1.getsize());
+		System.out.println(l1.isEmpty());
+		l1.addfirst(5);
+		l1.display();
+		System.out.println(l1.getFirst());
+		System.out.println(l1.getLast());
+//		System.out.println(l1.removeFirst());
+	}
+
+}
