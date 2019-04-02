@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="java.lang.String"/>
-<fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="javax.swing.plaf.synth.SynthSpinnerUI"/>
 <fullyQualifiedTypeName name="jan06.PermulationUsingString"/>
-<fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="jan20.fibonachii"/>
 <fullyQualifiedTypeName name="java.lang.Math"/>
 <fullyQualifiedTypeName name="java.lang.Character"/>
@@ -12,9 +10,18 @@
 <fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.sql.Array"/>
 <fullyQualifiedTypeName name="java.util.logging.Handler"/>
 <fullyQualifiedTypeName name="mar16.NodeAndLL"/>
+<fullyQualifiedTypeName name="java.security.GeneralSecurityException"/>
 <fullyQualifiedTypeName name="javax.xml.ws.Dispatch"/>
+<fullyQualifiedTypeName name="mar16.DetectAndRemoveLoop"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="org.w3c.dom.Node"/>
+<fullyQualifiedTypeName name="javax.swing.text.html.MinimalHTMLWriter"/>
+<fullyQualifiedTypeName name="javax.xml.soap.Node"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="java.util.LinkedList"/>
+<fullyQualifiedTypeName name="java.util.logging.Level"/>
 </qualifiedTypeNameHistroy>

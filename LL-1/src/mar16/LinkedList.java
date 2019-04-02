@@ -511,6 +511,77 @@ public class LinkedList {
     	}
     	return slow.data;
     }
+    public void Merge(LinkedList L1,LinkedList L2){
+    	Node h1=L1.head;
+    	Node h2=L2.head;
+    	while(h1!=null && h2!=null){
+    		if(h1.data<h2.data){
+    			this.addLast(h1.data);
+    			h1=h1.next;
+    		}
+    		else{
+    			this.addLast(h2.data);
+    			h2=h2.next;
+    		}
+    	}
+    	while(h1!=null){
+    			this.addLast(h1.data);
+    			h1=h1.next;
+    		
+    	}
+    	while(h2!=null){
+    			this.addLast(h2.data);
+    			h2=h2.next;
+    		
+    	}
+    	
+    	
+    }
+    private LinkedList MergeSort(Node start,Node end){
+    	
+    	if(MidNode(start, end).next==null){
+    		LinkedList temp=new LinkedList();
+    		temp.addLast(start.data);
+    		return temp;
+    	}
+    	Node mid=MidNode(start, end);
+    	Node temp=mid.next;
+    	mid.next=null;
+    	LinkedList l1=MergeSort(start, mid);
+    	LinkedList l2=MergeSort(temp, end);
+    	LinkedList Slist=new LinkedList();
+    	Slist.Merge(l1, l2);
+    			
+    			return Slist;
+    }
+    public LinkedList MergeSort(){
+    	LinkedList sl=MergeSort(this.head,this.tail);
+    	return sl;
+    }
+    private int addLinkedList(Node t1,Node t2, int s1, int s2, LinkedList result){
+    	if(s1==0 && s2==0){
+    		return 0;
+    	}
+    	while(s1!=s2){
+    		if(s1>s2){
+    			t1=t1.next;
+    			s1--;
+    		}
+    		else{
+    			t2=t2.next;
+    			s2--;
+    		}
+    	}
+    	int sum=addLinkedList(t1.next, t2.next, s1-1, s2-1, result);
+    	int sum1=t1.data+t2.data+sum;
+    	result.addFirst(sum1%10);
+    	
+    	return sum1/10;
+    }
+    public void addLinkedList(Node t1,Node t2){
+    	LinkedList result=new LinkedList();
+    	int add=addLinkedList(t1, t2,,, result);
+    }
     public static void main(String[] args) {
 		LinkedList l = new LinkedList();
 		l.addLast(1);
@@ -580,8 +651,36 @@ public class LinkedList {
 //		l.display();
 //		l.RemoveDuplicate();
 //		l.display();
-		System.out.println(l.MidElement(0, 5));
+		System.out.println(l.MidElement(0, 6));
 		System.out.println(l.KthFromLast(3));
+		LinkedList Ll1=new LinkedList(),Ll2=new LinkedList(),L3=new LinkedList();
+		Ll1.addLast(31);
+		Ll1.addLast(42);
+		Ll1.addLast(53);
+		Ll1.addLast(64);
+		Ll1.addLast(75);
+		Ll1.addLast(86);
+		Ll1.addLast(97);
+		Ll2.addLast(23);
+		Ll2.addLast(34);
+		Ll2.addLast(45);
+		Ll2.addLast(56);
+		Ll2.addLast(57);
+		Ll2.addLast(78);
+		L3.Merge(Ll1,Ll2);
+		L3.display();
+		L3.fold();
+		L3.display();
+	
+		LinkedList L4=new LinkedList();
+		L4=L3.MergeSort();
+		L4.display();
+//		L4.addLast(26);
+//		L4.display();
+//		L4=L4.MergeSort();
+//		L4.display();
 		
+		L4.addLinkedList(Ll1.head, Ll2.head);
+		L4.display();
 	}
 }
