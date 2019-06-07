@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.lang.String"/>
-<fullyQualifiedTypeName name="javax.swing.plaf.synth.SynthSpinnerUI"/>
 <fullyQualifiedTypeName name="jan06.PermulationUsingString"/>
 <fullyQualifiedTypeName name="jan20.fibonachii"/>
-<fullyQualifiedTypeName name="java.lang.Math"/>
 <fullyQualifiedTypeName name="java.lang.Character"/>
 <fullyQualifiedTypeName name="java.lang.Process"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
@@ -21,7 +18,22 @@
 <fullyQualifiedTypeName name="org.w3c.dom.Node"/>
 <fullyQualifiedTypeName name="javax.swing.text.html.MinimalHTMLWriter"/>
 <fullyQualifiedTypeName name="javax.xml.soap.Node"/>
-<fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="java.util.LinkedList"/>
 <fullyQualifiedTypeName name="java.util.logging.Level"/>
+<fullyQualifiedTypeName name="javax.print.attribute.Size2DSyntax"/>
+<fullyQualifiedTypeName name="java.rmi.Remote"/>
+<fullyQualifiedTypeName name="java.util.Stack"/>
+<fullyQualifiedTypeName name="may21.snqdemo.Interval"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="may21.SnQ"/>
+<fullyQualifiedTypeName name="may21.SnQ.mystack"/>
+<fullyQualifiedTypeName name="may21.kstack"/>
+<fullyQualifiedTypeName name="javax.swing.plaf.synth.SynthSpinnerUI"/>
+<fullyQualifiedTypeName name="java.nio.file.Path"/>
+<fullyQualifiedTypeName name="javax.swing.plaf.basic.BasicInternalFrameTitlePane.MaximizeAction"/>
+<fullyQualifiedTypeName name="java.lang.Math"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="may25.graph.THelper"/>
+<fullyQualifiedTypeName name="may25.graph.mat_pos"/>
+<fullyQualifiedTypeName name="may25.graph.BHelper"/>
 </qualifiedTypeNameHistroy>

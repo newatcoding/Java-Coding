@@ -383,19 +383,50 @@ public class gtree {
 		
 
 	}
-	public static void itetrativeorder(Node root){
-		for(int j=0;j<root.childern.size();j++){
-			System.out.print(root.data+"pre ");
-			Node temp=root.childern.get(j);
-			for(int i=0;i<temp.childern.size();i++){
-				System.out.println(temp.data+" ");
-				temp=temp.childern.get(j);
-			}
-			System.out.println(temp.data"post ");
-			System.out.println(root.data+"post");
+	public static class Ehelper{
+		
+		public int state;
+		public Node root;
+		Ehelper(Node root,int state){
+			this.root=root;
+			this.state=state;
 		}
 		
 	}
+	
+	//itetrativeorder
+	public static void euler(Node root){
+		
+		LinkedList<Ehelper> stack=new LinkedList<Ehelper>();
+		Ehelper rh=new Ehelper(root,0);
+		stack.addFirst(rh);
+		while(stack.size()>0){
+			Ehelper th=stack.getFirst();
+			int cs=th.root.childern.size();
+			if(th.state==0){
+				
+				System.out.println(th.root.data+"pre");
+				th.state++;
+			}
+			else if(th.state>=1 && th.state<=cs){
+				Ehelper ch=new Ehelper(th.root.childern.get(th.state-1),0);
+				stack.addFirst(ch);
+				if(th.state==2){
+				System.out.println(th.root.data+"in"+(th.state));
+				}
+				th.state++;
+			}
+			else if(th.state==cs+1){
+				System.out.println(th.root.data+"post");
+				th.state++;
+			}
+			else if(th.state==cs+2){
+				
+				stack.removeFirst();
+			}
+		}
+	}
+	//bonus 
 
 	public static void main(String[] args) {
 
@@ -415,21 +446,21 @@ public class gtree {
 		// mirror(root);
 		// removeLeaves(root);
 		// display(root);
-		HeapMover hm = new HeapMover();
-		multisolver(root, 0, hm);
-		System.out.println(hm.ht + " " + hm.mn + " " + hm.mx + " " + hm.sz);
-		SealAndFloor(root, 65, hm);
-		System.out.println(hm.seal + " " + hm.floor);
-		// PredecessorAndSuccessor(root, 0, 0, hm, 90);
-		// PredSuccway2(root, 0, 0, 90);
-		// KthLargest(root, 5, hm);
-		// System.out.println(hm.floor+" ");
-		LevelOrder(root);
-		System.out.println();
-
-		LevelOrderNextLine(root);
-		LevelOrderZigzag(root);
-		itetrativeorder(root);
+//		HeapMover hm = new HeapMover();
+//		multisolver(root, 0, hm);
+//		System.out.println(hm.ht + " " + hm.mn + " " + hm.mx + " " + hm.sz);
+//		SealAndFloor(root, 65, hm);
+//		System.out.println(hm.seal + " " + hm.floor);
+//		// PredecessorAndSuccessor(root, 0, 0, hm, 90);
+//		// PredSuccway2(root, 0, 0, 90);
+//		// KthLargest(root, 5, hm);
+//		// System.out.println(hm.floor+" ");
+//		LevelOrder(root);
+//		System.out.println();
+//
+//		LevelOrderNextLine(root);
+//		LevelOrderZigzag(root);
+		euler(root);
 	}
 
 }
