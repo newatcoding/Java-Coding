@@ -1,0 +1,56 @@
+package page2;
+
+import java.util.Scanner;
+
+public class Pattern10 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner n=new Scanner(System.in);
+        int b=n.nextInt();
+        int space=0 ;
+        int star=1;
+        int i;
+        int j;
+         int val=1;
+        for(i=1;i<=b;i++)
+        {
+    int myval=val;
+           for(int k=1;k<=star;k++)
+                { 
+                
+                    System.out.print(myval+" ");
+                    if(k<=star/2)
+                    {
+                    myval++; }
+                    else{
+                        myval--;
+                    }
+                }
+            for(int k=1;k<=space;k++)
+            {
+                System.out.print(" ");
+            }
+           for(int k=1;k<=star;k++)
+                { 
+                
+                    System.out.print(myval+" ");
+                    if(k<=star/2)
+                    {
+                    myval++; }
+                    else{
+                        myval--;
+                    }
+                }
+
+            System.out.println(" ");
+            if(i<(b+1)/2)
+            {
+                space+=2;
+                star--;
+                val--;
+            
+        }
+    }
+
+} }

@@ -1,0 +1,27 @@
+package july01;
+
+public class BeginingRecursion {
+
+	public static void PD(int n){
+		if(n==0){
+			return;
+		}
+		PD(n-1);
+		System.out.print(n+", ");
+	}
+	
+	public static void PDI(int n){
+		if(n==0){
+			return;
+		}
+		System.out.print(n+", ");
+		PD(n-1);
+		System.out.print(n+", ");
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		PD(5);
+		PDI(5);
+	}
+
+}

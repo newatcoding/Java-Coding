@@ -4,8 +4,6 @@
 <fullyQualifiedTypeName name="jan20.fibonachii"/>
 <fullyQualifiedTypeName name="java.lang.Character"/>
 <fullyQualifiedTypeName name="java.lang.Process"/>
-<fullyQualifiedTypeName name="java.lang.System"/>
-<fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
 <fullyQualifiedTypeName name="java.sql.Array"/>
 <fullyQualifiedTypeName name="java.util.logging.Handler"/>
@@ -36,4 +34,6 @@
 <fullyQualifiedTypeName name="may25.graph.THelper"/>
 <fullyQualifiedTypeName name="may25.graph.mat_pos"/>
 <fullyQualifiedTypeName name="may25.graph.BHelper"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
 </qualifiedTypeNameHistroy>
